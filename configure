@@ -542,9 +542,9 @@ int main() { return strlen(strerror(errno)); }
 EOF
 if try $CC $CFLAGS -o $test $test.c; then
   echo "Checking for strerror... Yes." | tee -a configure.log
+  CFLAGS="${CFLAGS} -DHAVE_STRERROR"
+  SFLAGS="${SFLAGS} -DHAVE_STRERROR"
 else
-  CFLAGS="${CFLAGS} -DNO_STRERROR"
-  SFLAGS="${SFLAGS} -DNO_STRERROR"
   echo "Checking for strerror... No." | tee -a configure.log
 fi
 
