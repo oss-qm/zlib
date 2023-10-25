@@ -15,10 +15,12 @@
 
 /example
 /example64
+/example64sh
 /examplesh
 **/libz.so*
 /minigzip
 /minigzip64
+/minigzip64sh
 /minigzipsh
 /zlib.pc
 /configure.log
@@ -34,3 +36,6 @@ contrib/vstudio/vc143/arm64
 contrib/nuget/bin
 contrib/nuget/obj
 *.included
+
+config.h
+.config
